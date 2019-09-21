@@ -90,6 +90,7 @@ def winner
     nil
   else
     turn_count.even? ? "O":"X"
+  end
 end
 
 
