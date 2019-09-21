@@ -79,8 +79,8 @@ circle = []
 
   end
 
-  if WIN_COMBINATIONS.find {|array| array.all? {|i| cross.include?(i) || circle.include(i)}}
-    WIN_COMBINATIONS.find {|array| array.all? {|i| cross.include?(i) || circle.include(i)}}
+  if WIN_COMBINATIONS.find {|array| array.all? {|i| cross.include?(i) || circle.include?(i)}}
+    WIN_COMBINATIONS.find {|array| array.all? {|i| cross.include?(i) || circle.include?(i)}}
   else
     false
   end
