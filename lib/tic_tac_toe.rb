@@ -87,7 +87,7 @@ circle = []
 end
 
 def full?
-  
+
 end
 
 end
