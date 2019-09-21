@@ -84,6 +84,7 @@ circle = []
   else
     false
   end
+  binding.pry
 
 end
 
