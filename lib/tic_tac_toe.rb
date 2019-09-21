@@ -77,10 +77,10 @@ circle = []
     end
   end
 
-  if WIN_COMBINATIONS.find (cross)
-    WIN_COMBINATIONS.find (cross)
-  elsif WIN_COMBINATIONS.find (circle)
-    WIN_COMBINATIONS.find (circle)
+  if WIN_COMBINATIONS.find {|array| array == cross}
+    WIN_COMBINATIONS.find {|array| array == cross}
+  elsif WIN_COMBINATIONS.find {|array| array == circle}
+    WIN_COMBINATIONS.find {|array| array == circle}
   else
     false
   end
