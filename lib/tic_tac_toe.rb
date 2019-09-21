@@ -84,4 +84,7 @@ end
 def over?
   self.full? || self.won?
 end
+
+def winner
+  self.current_player
 end
