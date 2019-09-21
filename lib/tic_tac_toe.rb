@@ -67,10 +67,10 @@ def won?
 cross = []
 circle = []
 
-  @board.collect.with_index do |position, index|
+  @board.each.with_index do |position, index|
     if position = "X"
       cross << index
-    elsif postion = "O"
+    elsif position = "O"
       circle << index
     else
       nil
