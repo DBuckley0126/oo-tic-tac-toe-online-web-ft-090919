@@ -82,7 +82,7 @@ circle = []
   if WIN_COMBINATIONS.find {|array| array.all? {|i| cross.include?(i)} || array.all? {|i| circle.include?(i)}}
     WIN_COMBINATIONS.find {|array| array.all? {|i| cross.include?(i)} || array.all? {|i| circle.include?(i)}}
   end
-  
+
 end
 
 def full?
