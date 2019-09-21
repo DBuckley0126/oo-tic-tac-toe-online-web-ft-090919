@@ -78,15 +78,15 @@ circle = []
     binding.pry
   end
 
-  if WIN_COMBINATIONS.find {|array| array == cross}
-    WIN_COMBINATIONS.find {|array| array == cross}
-  elsif WIN_COMBINATIONS.find {|array| array == circle}
-    WIN_COMBINATIONS.find {|array| array == circle}
+  if WIN_COMBINATIONS.find {|array| array.all? {|i| cross.include?(i)}}
+    WIN_COMBINATIONS.find {|array| array.all? {|i| cross.include?(i)}}
+  elsif WIN_COMBINATIONS.find {|array| array.all? {|i| circle.include?(i)}}
+    WIN_COMBINATIONS.find {|array| array.all? {|i| circle.include?(i)}}
   else
     false
   end
 
-
+#if [1, 2, 3].all? { |i| (1..9).include?(i) }
 end
 
 end
