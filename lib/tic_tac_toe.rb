@@ -94,7 +94,7 @@ def winner
 end
 
 def play
-  until self.over? == true || self.draw? == true do
+  until self.full? == true || self.won? == true|| self.draw? == true do
     self.turn
   end
 
