@@ -63,18 +63,9 @@ def turn
  self.display_board
 end
 
-#def won?
-#  WIN_COMBINATIONS.any? do |Winning_Combo|
-  #  if position_taken? == Winning_Combo
-  #    Winning_Combo
-  #  else
-#nil
-#    end
-#  end
-
 def won?
-  cross = []
-  circle = []
+cross = []
+circle = []
 
   @board.collect.with_index do |position, index|
     if position = "X"
@@ -87,11 +78,9 @@ def won?
   end
 
   if WIN_COMBINATIONS.find (cross)
-    puts WIN_COMBINATIONS.find (cross)
-    true
+    WIN_COMBINATIONS.find (cross)
   elsif WIN_COMBINATIONS.find (circle)
-    puts WIN_COMBINATIONS.find (circle)
-    true
+    WIN_COMBINATIONS.find (circle)
   else
     false
   end
