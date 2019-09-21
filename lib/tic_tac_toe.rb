@@ -81,7 +81,7 @@ def won?
   #  WIN_COMBINATIONS.find {|array| array.all? {|i| cross.include?(i)} || array.all? {|i| circle.include?(i)}}
 
   WIN_COMBINATIONS.each do |win_combination|
-    if board[win_combination[0]] != " " &&board[win_combination[0]] == board[win_combination[1]] && board[win_combination[1]] == board[win_combination[2]]
+    if @board[win_combination[0]] != " " &&@board[win_combination[0]] == @board[win_combination[1]] && @board[win_combination[1]] == @board[win_combination[2]]
   	return win_combination
     end
   end
