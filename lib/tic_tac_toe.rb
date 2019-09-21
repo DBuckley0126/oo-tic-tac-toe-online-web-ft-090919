@@ -68,10 +68,10 @@ cross = []
 circle = []
 
   @board.each.with_index do |position, index|
-    binding.pry
-    if position = "X"
+    #binding.pry
+    if position == "X"
       cross << index
-    elsif position = "O"
+    elsif position == "O"
       circle << index
     else
       nil
