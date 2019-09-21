@@ -79,16 +79,15 @@ circle = []
 
   end
 
-  if WIN_COMBINATIONS.find {|array| array.all? {|i| cross.include?(i)}}
-    WIN_COMBINATIONS.find {|array| array.all? {|i| cross.include?(i)}}
-  elsif WIN_COMBINATIONS.find {|array| array.all? {|i| circle.include?(i)}}
-    WIN_COMBINATIONS.find {|array| array.all? {|i| circle.include?(i)}}
+  if WIN_COMBINATIONS.find {|array| array.all? {|i| cross.include?(i) || circle.include(i)}}
+    WIN_COMBINATIONS.find {|array| array.all? {|i| cross.include?(i) || circle.include(i)}}
   else
     false
   end
+end
 
-#if [1, 2, 3].all? { |i| (1..9).include?(i) }
-#["X", "O", "X", "O", "X", "X", "O", "X", "O"]
+def full?
+  
 end
 
 end
