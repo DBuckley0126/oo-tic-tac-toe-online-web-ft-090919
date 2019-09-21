@@ -75,6 +75,7 @@ circle = []
     else
       nil
     end
+    binding.pry
   end
 
   if WIN_COMBINATIONS.find {|array| array == cross}
@@ -84,7 +85,7 @@ circle = []
   else
     false
   end
-  binding.pry
+
 
 end
 
