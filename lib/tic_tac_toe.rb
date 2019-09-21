@@ -78,7 +78,7 @@ def full?
 end
 
 def draw?
-  self.full? && self.won?
+  self.full? && !self.won?
 end
 
 end
