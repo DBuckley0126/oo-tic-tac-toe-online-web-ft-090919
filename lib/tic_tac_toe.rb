@@ -64,11 +64,10 @@ def turn
 end
 
 def won?
-cross = []
-circle = []
+  cross = []
+  circle = []
 
   @board.each.with_index do |position, index|
-    #binding.pry
     if position == "X"
       cross << index
     elsif position == "O"
@@ -76,13 +75,18 @@ circle = []
     else
       nil
     end
-
   end
 
-  if WIN_COMBINATIONS.find {|array| array.all? {|i| cross.include?(i)} || array.all? {|i| circle.include?(i)}}
-    WIN_COMBINATIONS.find {|array| array.all? {|i| cross.include?(i)} || array.all? {|i| circle.include?(i)}}
-  end
+  #if WIN_COMBINATIONS.find {|array| array.all? {|i| cross.include?(i)} || array.all? {|i| circle.include?(i)}}
+  #  WIN_COMBINATIONS.find {|array| array.all? {|i| cross.include?(i)} || array.all? {|i| circle.include?(i)}}
 
+  WIN_COMBINATIONS.each do |win_combination|
+    if board[win_combination[0]] != " " &&board[win_combination[0]] == board[win_combination[1]] && board[win_combination[1]] == board[win_combination[2]]
+  	return win_combination
+    end
+  end
+  
+  end
 end
 
 def full?
@@ -93,6 +97,6 @@ end
 
 #WIN_COMBINATIONS.each do |win_combination|
 #  if board[win_combination[0]] != " " &&board[win_combination[0]] == board[win_combination[1]] && board[win_combination[1]] == board[win_combination[2]]
-	#return true
+	#return win_combination
 #  end
 #end
