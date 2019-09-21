@@ -68,6 +68,7 @@ cross = []
 circle = []
 
   @board.each.with_index do |position, index|
+    binding.pry
     if position = "X"
       cross << index
     elsif position = "O"
@@ -77,7 +78,7 @@ circle = []
     end
 
   end
-#binding.pry
+
   if WIN_COMBINATIONS.find {|array| array.all? {|i| cross.include?(i)}}
     WIN_COMBINATIONS.find {|array| array.all? {|i| cross.include?(i)}}
   elsif WIN_COMBINATIONS.find {|array| array.all? {|i| circle.include?(i)}}
