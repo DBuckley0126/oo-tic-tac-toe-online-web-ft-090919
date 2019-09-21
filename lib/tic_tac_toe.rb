@@ -96,10 +96,13 @@ end
 def play
   until self.over? do
     self.turn
-
   end
 
-
+  if won?
+    puts "Well done!"
+  elsif draw?
+    puts "Game was a draw"
+  end
 end
 
 
