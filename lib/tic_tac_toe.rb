@@ -86,7 +86,7 @@ def over?
 end
 
 def winner
-  if full?
+  if !self.full?
     nil
   else
     turn_count.even? ? "O":"X"
