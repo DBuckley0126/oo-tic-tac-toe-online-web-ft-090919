@@ -86,7 +86,7 @@ def over?
 end
 
 def winner
-  self.current_player
+  turn_count.even? ? "O":"X"
 end
 
 
