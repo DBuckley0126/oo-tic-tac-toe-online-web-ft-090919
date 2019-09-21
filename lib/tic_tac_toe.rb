@@ -96,6 +96,7 @@ end
 def play
   until self.over? == true do
     self.turn
+    puts "1"
   end
 
   if won?
