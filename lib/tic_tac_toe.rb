@@ -77,7 +77,7 @@ circle = []
     end
 
   end
-binding.pry
+#binding.pry
   if WIN_COMBINATIONS.find {|array| array.all? {|i| cross.include?(i)}}
     WIN_COMBINATIONS.find {|array| array.all? {|i| cross.include?(i)}}
   elsif WIN_COMBINATIONS.find {|array| array.all? {|i| circle.include?(i)}}
