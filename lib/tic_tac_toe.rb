@@ -83,5 +83,5 @@ end
 
 def over?
   self.full? || self.won?
-
+end
 end
