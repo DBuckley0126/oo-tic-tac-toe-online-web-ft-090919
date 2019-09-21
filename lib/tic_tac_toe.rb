@@ -94,7 +94,7 @@ def winner
 end
 
 def play
-  until self.over? do
+  until !self.over? do
     self.turn
   end
 
