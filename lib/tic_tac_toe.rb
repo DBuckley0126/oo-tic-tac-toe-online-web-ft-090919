@@ -75,9 +75,9 @@ circle = []
     else
       nil
     end
-    #binding.pry
-  end
 
+  end
+binding.pry
   if WIN_COMBINATIONS.find {|array| array.all? {|i| cross.include?(i)}}
     WIN_COMBINATIONS.find {|array| array.all? {|i| cross.include?(i)}}
   elsif WIN_COMBINATIONS.find {|array| array.all? {|i| circle.include?(i)}}
@@ -87,6 +87,7 @@ circle = []
   end
 
 #if [1, 2, 3].all? { |i| (1..9).include?(i) }
+#["X", "O", "X", "O", "X", "X", "O", "X", "O"]
 end
 
 end
