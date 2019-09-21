@@ -94,9 +94,8 @@ def winner
 end
 
 def play
-  until self.over? == true do
+  until self.over? == true || self.draw? == true do
     self.turn
-    puts "1"
   end
 
   if won?
