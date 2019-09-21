@@ -67,15 +67,15 @@ def won?
   cross = []
   circle = []
 
-  @board.each.with_index do |position, index|
-    if position == "X"
-      cross << index
-    elsif position == "O"
-      circle << index
-    else
-      nil
-    end
-  end
+  #@board.each.with_index do |position, index|
+  #  if position == "X"
+    #  cross << index
+  #  elsif position == "O"
+  #    circle << index
+  #  else
+  #    nil
+  #  end
+  #end
 
   #if WIN_COMBINATIONS.find {|array| array.all? {|i| cross.include?(i)} || array.all? {|i| circle.include?(i)}}
   #  WIN_COMBINATIONS.find {|array| array.all? {|i| cross.include?(i)} || array.all? {|i| circle.include?(i)}}
